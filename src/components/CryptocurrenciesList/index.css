@@ -30,24 +30,26 @@ h1 {
   list-style-type: none;
 }
 
-.sixth-con {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .fourth-con {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   color: #ffffff;
-  width: 30%;
+  width: 90%;
 }
 
 .fifth-con {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 40%;
+  justify-content: space-around;
+  width: 25%;
+  margin-right: 75px;
+}
+
+.usd {
+  padding-left: 80px;
+}
+
+.coin-type {
+  margin-left: 80px;
 }

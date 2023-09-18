@@ -32,6 +32,16 @@ class CryptocurrenciesList extends Component {
     this.setState({cryptoList: camelCaseCryptoData, isLoading: false})
   }
 
+  getHeaderListItems = () => (
+    <div className="fourth-con">
+      <p className="coin-type">Coin Type</p>
+      <div className="fifth-con">
+        <p>EURO</p>
+        <p className="usd">USD</p>
+      </div>
+    </div>
+  )
+
   render() {
     const {cryptoList, isLoading} = this.state
     const loadValue = isLoading ? 'loader' : ''
@@ -49,15 +59,7 @@ class CryptocurrenciesList extends Component {
               className="img"
             />
             <ul className="third-con">
-              <div className="sixth-con">
-                <div className="fourth-con">
-                  <li>Coin Type</li>
-                  <div className="fifth-con">
-                    <li>EURO</li>
-                    <li>USD</li>
-                  </div>
-                </div>
-              </div>
+              {this.getHeaderListItems()}
               {cryptoList.map(each => (
                 <CryptocurrencyItem each={each} key={each.id} />
               ))}
